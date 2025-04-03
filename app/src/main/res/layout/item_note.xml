@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:layout_margin="6dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        android:padding="12dp"
+        android:background="@drawable/bg_search_bar">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note title"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#222222" />
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note content preview..."
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="01/04/2025 09:00"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginTop="6dp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

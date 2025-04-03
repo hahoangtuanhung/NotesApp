@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search here</string>
+    <string name="noNote">No notes avaiable</string>
+    <string name="noteApp">Note App</string>
+    <string-array name="note_categories">
+        <item>All</item>
+        <item>Home</item>
+        <item>Work</item>
+    </string-array>
+    <string name="title">Title</string>
+    <string name="des">Description</string>
+</resources>
