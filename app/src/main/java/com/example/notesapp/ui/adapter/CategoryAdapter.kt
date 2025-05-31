@@ -2,7 +2,9 @@ package com.example.notesapp.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.notesapp.R
 import com.example.notesapp.databinding.ItemCategoryBinding
 
 class CategoryAdapter(
@@ -15,10 +17,15 @@ class CategoryAdapter(
         fun bind(category: String, isSelected: Boolean) {
             binding.tvCategory.text = category
             binding.tvCategory.setBackgroundResource(
-                if (isSelected) com.example.notesapp.R.drawable.bg_category_selected
-                else com.example.notesapp.R.drawable.bg_category_unselected
+                if (isSelected) R.drawable.bg_category_selected
+                else R.drawable.bg_category_unselected
             )
-
+            binding.tvCategory.setTextColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    if (isSelected) R.color.black else R.color.white
+                )
+            )
             binding.tvCategory.setOnClickListener {
                 val oldPosition = selectedPosition
                 selectedPosition = adapterPosition
