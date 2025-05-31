@@ -10,4 +10,6 @@
     <color name="red">#F04438</color>
     <color name="violet">#913E98</color>
     <color name="graphite">#617E8C</color>
+
+    <color name="color_back">#252525</color>
 </resources>

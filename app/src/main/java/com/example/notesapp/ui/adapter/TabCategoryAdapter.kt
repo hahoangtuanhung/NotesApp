@@ -1,4 +1,4 @@
-package com.example.notesapp.ui
+package com.example.notesapp.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,7 +12,8 @@ class TabCategoryAdapter(
     private val onCategoryClick: (String) -> Unit
 ) : RecyclerView.Adapter<TabCategoryAdapter.CategoryViewHolder>() {
 
-    inner class CategoryViewHolder(val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class CategoryViewHolder(val binding: ItemCategoryBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(category: String) {
             binding.tvCategory.text = category
             if (category == selectedCategory) {
@@ -27,7 +28,8 @@ class TabCategoryAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-        val binding = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CategoryViewHolder(binding)
     }
 

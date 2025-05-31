@@ -6,6 +6,7 @@
     <string name="search">Search here</string>
     <string name="noNote">No notes avaiable</string>
     <string name="noteApp">Note App</string>
+    <string name="my_notes">My Notes</string>
     <string-array name="note_categories">
         <item>All</item>
         <item>Home</item>

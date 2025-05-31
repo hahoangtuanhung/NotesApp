@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.data.Note
 import com.example.notesapp.databinding.ItemNoteBinding
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 class NoteAdapter(
     private val onItemClick: (Note) -> Unit

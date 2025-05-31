@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.notesapp.databinding.FragmentHomeBinding
 import com.example.notesapp.setSingleClick
+import com.example.notesapp.ui.adapter.CategoryAdapter
+import com.example.notesapp.ui.adapter.NoteCategoryPagerAdapter
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -55,7 +57,8 @@ class HomeFragment : Fragment() {
             Toast.makeText(requireContext(), "Tính năng chưa hỗ trợ", Toast.LENGTH_SHORT).show()
         }
         // Update category tab selection on page swipe
-        binding.viewPagerNotes.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        binding.viewPagerNotes.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 categoryAdapter.setSelectedPosition(position)
                 binding.rvCategory.smoothScrollToPosition(position)

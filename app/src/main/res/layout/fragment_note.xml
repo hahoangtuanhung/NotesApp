@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_note"
+    android:background="@color/color_back"
     tools:context=".ui.NoteFragment">
 
     <ImageView
         android:id="@+id/ic_check"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:src="@drawable/ic_check"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/ic_share"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="64dp"
         android:src="@drawable/ic_share"
         app:layout_constraintBottom_toBottomOf="@id/ic_check"
@@ -28,10 +28,10 @@
 
     <ImageView
         android:id="@+id/ic_more"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/ic_more"
+        android:src="@drawable/ic_more_point"
         app:layout_constraintBottom_toBottomOf="@id/ic_share"
         app:layout_constraintStart_toEndOf="@id/ic_share"
         app:layout_constraintTop_toTopOf="@id/ic_share"
@@ -39,14 +39,13 @@
 
     <ImageView
         android:id="@+id/ic_delete"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintTop_toTopOf="@id/ic_check"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="@id/ic_check"
         app:layout_constraintEnd_toStartOf="@id/ic_share"
-        android:src="@drawable/ic_delete"
-        android:layout_marginEnd="16dp"
-        />
+        app:layout_constraintTop_toTopOf="@id/ic_check" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,7 +59,7 @@
             android:id="@+id/spinner_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/note_categories"/>
+            android:entries="@array/note_categories" />
 
         <TextView
             android:id="@+id/tv_timestamp"
@@ -68,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="12sp" />
 
         <EditText
@@ -78,17 +77,23 @@
             android:background="@android:color/transparent"
             android:hint="@string/title"
             android:inputType="textCapSentences"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
             android:textSize="32sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edt_note_des"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="520dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
+            android:gravity="top|start"
             android:hint="@string/des"
-            android:inputType="textCapSentences"
+            android:inputType="textMultiLine|textCapSentences"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
             android:textSize="20sp" />
     </LinearLayout>
 

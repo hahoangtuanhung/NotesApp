@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_back"
     tools:context=".ui.HomeFragment">
 
     <ImageView
         android:id="@+id/ic_index"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:src="@drawable/ic_menu"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,9 +21,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"
         android:gravity="center"
-        android:text="@string/noteApp"
-        android:textColor="#055397"
-        android:textSize="24sp"
+        android:text="@string/my_notes"
+        android:textColor="@color/white"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@id/ic_index"
         app:layout_constraintEnd_toStartOf="@id/ic_search"
         app:layout_constraintStart_toEndOf="@id/ic_index"
@@ -30,8 +31,8 @@
 
     <ImageView
         android:id="@+id/ic_search"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="64dp"
         android:src="@drawable/ic_search"
         app:layout_constraintBottom_toBottomOf="@id/ic_index"
@@ -40,10 +41,10 @@
 
     <ImageView
         android:id="@+id/ic_more"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/ic_more"
+        android:src="@drawable/ic_more_point"
         app:layout_constraintBottom_toBottomOf="@id/ic_search"
         app:layout_constraintStart_toEndOf="@id/ic_search"
         app:layout_constraintTop_toTopOf="@id/ic_search" />
@@ -61,46 +62,31 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/btn_add" />
 
-
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/rvNotes"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/rv_category" />-->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:overScrollMode="never"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/ic_index"
-        app:tabIndicatorColor="@color/primary"
-        app:tabSelectedTextColor="@color/primary"
-        app:tabTextColor="@color/gray"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/ic_index" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerNotes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rv_category" />
 
     <ImageView
         android:id="@+id/btn_add"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_margin="36dp"
-        android:src="@drawable/btn_add_blue"
+        android:src="@drawable/btn_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -1,8 +1,9 @@
-package com.example.notesapp.ui
+package com.example.notesapp.ui.adapter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.notesapp.ui.NoteListFragment
 
 class NoteCategoryPagerAdapter(
     fragment: Fragment,
